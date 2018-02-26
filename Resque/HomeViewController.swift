@@ -238,10 +238,20 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
                             let xPercentage = view.frame.width / 100.0
                             let yPercentage = view.frame.height / 100.0
                 
+                            if notADogDescription != "" {
+                                let notADogSubview : ThatsNotADogView = ThatsNotADogView(frame: CGRect(x: xPercentage * 7.5, y: yPercentage * 6, width: xPercentage * 85, height: yPercentage * 60))
+                                
+                                // CONSTRUCT NOT A DOG VIEW
+                                notADogSubview.cardCopy.text = "Because we’re not sure what breed this is. In fact we’re \(breedConfidencePercentage)% sure it's a \(notADogDescription) 🤔. Sorry—here’s some cute dogs available for adoption nearby though."
+                                
+                                pizzaScrollView.addSubview(notADogSubview)
+                                
+                            } else {
+                                // IS A DOG
+                
                             let photoResultsubview:PhotoMatchViewFrame = PhotoMatchViewFrame(frame: CGRect(x: xPercentage * 7.5, y: yPercentage * 6, width: xPercentage * 85, height: yPercentage * 60))
                 
                             // Construct
-                     //       photoResultsubview.resultImageView.image = UIImage(named: "breed-overview-placeholder")
                 
                             photoResultsubview.resultImageView.sd_setImage(with: URL(string: breedHeroImage), completed: nil)
                 
@@ -281,6 +291,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
                             // END
                 
                             pizzaScrollView.addSubview(photoResultsubview)
+                            }
                 
                             // WAS x-6 & y-2 for top left corner placement
                             let selectedPhoto:SelectedPhotoView = SelectedPhotoView(frame: CGRect(x: xPercentage * 10, y: yPercentage * 22, width: xPercentage * 22, height: xPercentage * 22))
@@ -446,6 +457,9 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     // MARK: Add Actions
     
     @IBAction func imageSearchDidTap(_ sender: Any) {
+        // Reset Not a Dog Variable
+        notADogDescription = ""
+        
         imagePickerHelper = ImagePickerHelper(viewController: self, completion: { (image) in
             self.selectedSearchImage = CIImage(image: image!)
             
@@ -511,7 +525,19 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
                         } else {
                             print("==== \(breed) ====")
                             print("That's not a dog!")
-                            print(breedCrossCheck)
+                            notADogDescription = breedCrossCheck
+                            
+                            // Separate into String
+                            let descriptionToParse = notADogDescription.components(separatedBy: ",")
+                            notADogDescription = descriptionToParse[0]
+                            print(notADogDescription)
+                            
+                            // Set Params for the image rec for the not a dog view
+                            isImageSearchActive = true
+                            searchPhoto = UIImage(ciImage: image)
+                            breedConfidencePercentage = Int(firstResult.confidence * 100)
+                            breed = ""
+                            breedName = ""
                         }
                     }
                 }

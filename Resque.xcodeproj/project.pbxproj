@@ -27,6 +27,8 @@
 		A26CF630203DE6FB008CBB29 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26CF62F203DE6FB008CBB29 /* WelcomeViewController.swift */; };
 		A26CF632203E3CB0008CBB29 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26CF631203E3CB0008CBB29 /* RegistrationViewController.swift */; };
 		A26CF6342040E3A2008CBB29 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26CF6332040E3A2008CBB29 /* LoginViewController.swift */; };
+		A26CF6362044BE4A008CBB29 /* ThatsNotADogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A26CF6352044BE4A008CBB29 /* ThatsNotADogView.xib */; };
+		A26CF6382044C7BB008CBB29 /* ThatsNotADogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26CF6372044C7BB008CBB29 /* ThatsNotADogView.swift */; };
 		A287AA271FFC60C200439F61 /* EditSizeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A287AA261FFC60C200439F61 /* EditSizeTableViewController.swift */; };
 		A287AA291FFC6B7F00439F61 /* EditAgeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A287AA281FFC6B7F00439F61 /* EditAgeTableViewController.swift */; };
 		A28E419A2024DB9A00A94C1C /* UILabelLineHeightHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28E41992024DB9A00A94C1C /* UILabelLineHeightHelper.swift */; };
@@ -93,6 +95,8 @@
 		A26CF62F203DE6FB008CBB29 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		A26CF631203E3CB0008CBB29 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		A26CF6332040E3A2008CBB29 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A26CF6352044BE4A008CBB29 /* ThatsNotADogView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThatsNotADogView.xib; sourceTree = "<group>"; };
+		A26CF6372044C7BB008CBB29 /* ThatsNotADogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThatsNotADogView.swift; sourceTree = "<group>"; };
 		A287AA261FFC60C200439F61 /* EditSizeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSizeTableViewController.swift; sourceTree = "<group>"; };
 		A287AA281FFC6B7F00439F61 /* EditAgeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAgeTableViewController.swift; sourceTree = "<group>"; };
 		A28E41992024DB9A00A94C1C /* UILabelLineHeightHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelLineHeightHelper.swift; sourceTree = "<group>"; };
@@ -241,6 +245,8 @@
 				A2CA353620100D2900C2D908 /* CelebrationView.xib */,
 				A2D8E3322016B5020094568B /* PhotoMatchViewFrame.swift */,
 				A2D8E3302016AED10094568B /* PhotoMatch.xib */,
+				A26CF6372044C7BB008CBB29 /* ThatsNotADogView.swift */,
+				A26CF6352044BE4A008CBB29 /* ThatsNotADogView.xib */,
 				A2CA3532200950E500C2D908 /* MessageCard.swift */,
 				A2CA353020094DDC00C2D908 /* MessageCard.xib */,
 				A2D301921FE06568000512BB /* FavoritesCollectionViewCell.swift */,
@@ -367,6 +373,7 @@
 				A2CA353F20101B9A00C2D908 /* celebrate.gif in Resources */,
 				A2D8E33520175E800094568B /* SelectedPhoto.xib in Resources */,
 				A23DAAA12008FD79008E94F9 /* EmptyStateFrame.xib in Resources */,
+				A26CF6362044BE4A008CBB29 /* ThatsNotADogView.xib in Resources */,
 				A2D8E3312016AED10094568B /* PhotoMatch.xib in Resources */,
 				A2D301941FE06568000512BB /* ButtonViewFrame.xib in Resources */,
 				A2D3017E1FE05B3E000512BB /* Main.storyboard in Resources */,
@@ -473,6 +480,7 @@
 				A261EC0D1FE84DCC0042722F /* ImageCaroselPageViewController.swift in Sources */,
 				A2D8E33B201944260094568B /* VisionBreedList.swift in Sources */,
 				A28E419E2025F20500A94C1C /* BreedDict.swift in Sources */,
+				A26CF6382044C7BB008CBB29 /* ThatsNotADogView.swift in Sources */,
 				A253FCF02000FE5F00E6F298 /* BreedTableViewCell.swift in Sources */,
 				A239CAF31FF93FEA00B742EE /* SearchParams.swift in Sources */,
 				A239CAF11FF6857100B742EE /* SearchTableViewController.swift in Sources */,

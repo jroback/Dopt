@@ -43,4 +43,5 @@ var breedName : String = ""
 var breedHeroImage : String = ""
 var breedDescription : String = ""
 var breedPersonality : String = ""
+var notADogDescription = ""
 var breedTraits = [String]()
