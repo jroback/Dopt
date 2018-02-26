@@ -61,7 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 userFavesDict.append(userFave)
             }
             appDatabase.child("users").child((currentUser?.userID)!).child("favorites").setValue(userFavesDict)
-        } else {
+        } else if currentUser != nil {
             appDatabase.child("users").child((currentUser?.userID)!).child("favorites").setValue(nil)
         }
         // Update Profile URL
