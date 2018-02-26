@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonViewFrame" customModule="rescue" customModuleProvider="target">
+            <connections>
+                <outlet property="xibButtonFrame" destination="gcg-vO-oeF" id="aO8-Hz-g1V"/>
+                <outlet property="xibLike" destination="z0D-xa-Czt" id="EhB-mQ-Izs"/>
+                <outlet property="xibUnlike" destination="eWG-mv-GBy" id="Jjh-fb-XjS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="169"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcg-vO-oeF">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="169"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWG-mv-GBy" userLabel="xib Unlike">
+                            <rect key="frame" x="111" y="8" width="153" height="153"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="eWG-mv-GBy" secondAttribute="height" multiplier="1:1" id="Qc8-ke-XPD"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="Like-solid"/>
+                            <connections>
+                                <action selector="Unlike:" destination="-1" eventType="touchUpInside" id="gbw-iH-UAw"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0D-xa-Czt" userLabel="xib Like">
+                            <rect key="frame" x="111" y="8" width="153" height="153"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="z0D-xa-Czt" secondAttribute="height" multiplier="1:1" id="ATM-EJ-HAY"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="like-empty"/>
+                            <connections>
+                                <action selector="Like:" destination="-1" eventType="touchUpInside" id="AcT-hO-d9Y"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="eWG-mv-GBy" firstAttribute="top" secondItem="gcg-vO-oeF" secondAttribute="top" constant="8" id="0Gc-a2-FjX"/>
+                        <constraint firstItem="z0D-xa-Czt" firstAttribute="centerY" secondItem="gcg-vO-oeF" secondAttribute="centerY" id="2bl-AO-JNO"/>
+                        <constraint firstAttribute="bottom" secondItem="z0D-xa-Czt" secondAttribute="bottom" constant="8" id="C1W-BR-F8D"/>
+                        <constraint firstItem="eWG-mv-GBy" firstAttribute="centerY" secondItem="gcg-vO-oeF" secondAttribute="centerY" id="Vh9-bZ-WJw"/>
+                        <constraint firstItem="eWG-mv-GBy" firstAttribute="centerX" secondItem="gcg-vO-oeF" secondAttribute="centerX" id="XIF-xl-Qan"/>
+                        <constraint firstItem="z0D-xa-Czt" firstAttribute="top" secondItem="gcg-vO-oeF" secondAttribute="top" constant="8" id="Zoa-IO-Hy3"/>
+                        <constraint firstItem="z0D-xa-Czt" firstAttribute="centerX" secondItem="gcg-vO-oeF" secondAttribute="centerX" id="oEU-CF-Zkt"/>
+                        <constraint firstAttribute="bottom" secondItem="eWG-mv-GBy" secondAttribute="bottom" constant="8" id="sby-R0-HG5"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="gcg-vO-oeF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Tnu-1I-sPc"/>
+                <constraint firstAttribute="bottom" secondItem="gcg-vO-oeF" secondAttribute="bottom" id="h6Y-K3-aOQ"/>
+                <constraint firstItem="gcg-vO-oeF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jh6-AY-QEr"/>
+                <constraint firstAttribute="trailing" secondItem="gcg-vO-oeF" secondAttribute="trailing" id="yeK-S6-SSH"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="3.5" y="-176.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Like-solid" width="242" height="241"/>
+        <image name="like-empty" width="242" height="241"/>
+    </resources>
+</document>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
+            <string>AvenirNext-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmptyStateFrame" customModule="Resque" customModuleProvider="target">
+            <connections>
+                <outlet property="actionButton" destination="heu-y3-DkA" id="4Iu-rW-DAU"/>
+                <outlet property="backgroundView" destination="iN0-l3-epB" id="1ni-tr-atZ"/>
+                <outlet property="descriptionLabel" destination="mn6-ds-hYa" id="CNt-MJ-bUZ"/>
+                <outlet property="heroImage" destination="ycb-B6-P8k" id="dSN-HS-DvH"/>
+                <outlet property="titleLabel" destination="hev-y8-NnI" id="0jC-0i-hER"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-faves-empty" translatesAutoresizingMaskIntoConstraints="NO" id="ycb-B6-P8k">
+                    <rect key="frame" x="52.5" y="80" width="270" height="270"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="270" id="UYv-w4-c8d"/>
+                        <constraint firstAttribute="height" constant="270" id="mJl-LX-kc9"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Favorites" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hev-y8-NnI">
+                    <rect key="frame" x="16" y="380" width="343" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="AoG-Ch-Y9z"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="28"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the ♥︎ to add pups here." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mn6-ds-hYa">
+                    <rect key="frame" x="16" y="413" width="343" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="0Up-Wm-WdZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heu-y3-DkA">
+                    <rect key="frame" x="87.5" y="551" width="200" height="36"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="5uY-Cq-E9G"/>
+                        <constraint firstAttribute="width" constant="200" id="z3f-1O-bcE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                    <state key="normal" title="Create New Search">
+                        <color key="titleColor" red="0.31764705879999999" green="0.65490196079999996" blue="0.97647058819999999" alpha="0.85191271550000003" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.31764705879999999" green="0.65490196079999996" blue="0.97647058819999999" alpha="0.85191271550000003" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="hev-y8-NnI" secondAttribute="trailing" constant="16" id="5fr-qs-hE9"/>
+                <constraint firstItem="hev-y8-NnI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="73k-N5-QLE"/>
+                <constraint firstItem="hev-y8-NnI" firstAttribute="top" secondItem="ycb-B6-P8k" secondAttribute="bottom" constant="30" id="CmV-ne-kGY"/>
+                <constraint firstItem="mn6-ds-hYa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="Mmi-Ug-w7u"/>
+                <constraint firstAttribute="trailing" secondItem="mn6-ds-hYa" secondAttribute="trailing" constant="16" id="Pcp-qs-Vab"/>
+                <constraint firstItem="ycb-B6-P8k" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="QcO-zV-cI3"/>
+                <constraint firstItem="heu-y3-DkA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Swv-7Z-fPo"/>
+                <constraint firstItem="ycb-B6-P8k" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="80" id="d4P-wD-y59"/>
+                <constraint firstItem="mn6-ds-hYa" firstAttribute="top" secondItem="hev-y8-NnI" secondAttribute="bottom" constant="12" id="ele-DX-Rk6"/>
+                <constraint firstAttribute="bottom" secondItem="heu-y3-DkA" secondAttribute="bottom" constant="80" id="lmO-SL-bOF"/>
+            </constraints>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="no-faves-empty" width="750" height="750"/>
+    </resources>
+</document>
