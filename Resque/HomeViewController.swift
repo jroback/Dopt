@@ -241,8 +241,14 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
                             if notADogDescription != "" {
                                 let notADogSubview : ThatsNotADogView = ThatsNotADogView(frame: CGRect(x: xPercentage * 7.5, y: yPercentage * 6, width: xPercentage * 85, height: yPercentage * 60))
                                 
+                                // GET PREFIX - either "a" or "an"
+                                var prefix = "a"
+                                if notADogDescription.first == "A" || notADogDescription.first == "E" || notADogDescription.first == "I" || notADogDescription.first == "O" || notADogDescription.first == "U" {
+                                    prefix = "an"
+                                }
+                                
                                 // CONSTRUCT NOT A DOG VIEW
-                                notADogSubview.cardCopy.text = "Because we’re not sure what breed this is. In fact we’re \(breedConfidencePercentage)% sure it's a \(notADogDescription) 🤔. Sorry—here’s some cute dogs available for adoption nearby though."
+                                notADogSubview.cardCopy.text = "Because we’re not sure what breed it is. In fact we’re \(breedConfidencePercentage)% sure it's \(prefix) \(notADogDescription). Sorry—here’s some cute dogs available for adoption nearby though."
                                 
                                 pizzaScrollView.addSubview(notADogSubview)
                                 
@@ -405,9 +411,79 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
             // Position Subview
             let xPercentage = view.frame.width / 100.0
             let yPercentage = view.frame.height / 100.0
+            
             pizzaScrollView.contentSize.width = view.frame.width
             
-            let subview:MessageCard = MessageCard(frame: CGRect(x: xPercentage * 7.5, y: yPercentage * 6.0, width: xPercentage * 85.0, height: yPercentage * 60.0))
+            if isImageSearchActive == true {
+                // IS A DOG
+                
+                let photoResultsubview:PhotoMatchViewFrame = PhotoMatchViewFrame(frame: CGRect(x: xPercentage * 7.5, y: yPercentage * 6, width: xPercentage * 85, height: yPercentage * 60))
+                
+                // Construct
+                
+                photoResultsubview.resultImageView.sd_setImage(with: URL(string: breedHeroImage), completed: nil)
+                
+                photoResultsubview.breedResultLabel.text = breedName
+                photoResultsubview.breedResultLabel.setLineHeight(lineHeight: 0.1)
+                
+                // Add breed trait tags
+                for i in 0..<breedTraits.count{
+                    let trait = photoResultsubview.traitContainer.viewWithTag(i+1) as? UILabel
+                    trait?.text = " \(breedTraits[i])    ".capitalized
+                    if trait?.text?.capitalized == " Hypoallergenic    " {
+                        trait?.backgroundColor = UIColor(red: 0.3176, green: 0.6549, blue: 0.9765, alpha: 0.85) // Blue color
+                        trait?.textColor = UIColor.white
+                    } else {
+                        trait?.backgroundColor = UIColor.groupTableViewBackground
+                        trait?.textColor = UIColor.gray
+                    }
+                    trait?.layer.cornerRadius = (trait?.frame.height)! / 2.0
+                    trait?.clipsToBounds = true
+                    trait?.layer.borderWidth = 0.5
+                    trait?.layer.borderColor = UIColor.gray.cgColor
+                }
+                
+                if breedConfidencePercentage >= 75 {
+                    photoResultsubview.confidenceCategoryLabel.text = "\(breedConfidencePercentage)% VERY CONFIDENT"
+                    photoResultsubview.confidenceCategoryLabel.textColor = UIColor(red: 0.4588, green: 0.749, blue: 0, alpha: 1.0) /* #75bf00 GREEN */
+                } else if breedConfidencePercentage >= 50 {
+                    photoResultsubview.confidenceCategoryLabel.text = "\(breedConfidencePercentage)% FAIRLY CONFIDENT"
+                } else if breedConfidencePercentage >= 25 {
+                    photoResultsubview.confidenceCategoryLabel.text = "\(breedConfidencePercentage)% SOMEWHAT CONFIDENT"
+                    photoResultsubview.confidenceCategoryLabel.textColor = UIColor.orange
+                } else if breedConfidencePercentage >= 0 {
+                    photoResultsubview.confidenceCategoryLabel.text = "\(breedConfidencePercentage)% NOT VERY CONFIDENT"
+                    photoResultsubview.confidenceCategoryLabel.textColor = UIColor.red
+                }
+                
+                // END
+                
+                pizzaScrollView.contentSize.width = view.frame.width * 2.0
+                pizzaScrollView.addSubview(photoResultsubview)
+            
+            // WAS x-6 & y-2 for top left corner placement
+            let selectedPhoto:SelectedPhotoView = SelectedPhotoView(frame: CGRect(x: xPercentage * 10, y: yPercentage * 22, width: xPercentage * 22, height: xPercentage * 22))
+            
+            // Construct
+            if searchPhoto != nil {
+                selectedPhoto.selectedPhoto.image = searchPhoto
+            }
+            
+            let nearbySubview:NearbyButtonView = NearbyButtonView(frame: CGRect(x: xPercentage, y: yPercentage * 68, width: xPercentage * 100, height: yPercentage * 14))
+            nearbySubview.nearbyCountButton.setTitle(String(filteredPuppyDict.count), for: .normal)
+            
+            pizzaScrollView.addSubview(nearbySubview)
+            pizzaScrollView.addSubview(selectedPhoto)
+            }
+    // Account for image offset?
+            var resultOffset = 0
+            if isImageSearchActive == true {
+                resultOffset = 1
+            }
+            
+            let xPosition = (view.frame.width * CGFloat(resultOffset)) + xPercentage * 7.5
+            
+            let subview:MessageCard = MessageCard(frame: CGRect(x: xPosition, y: yPercentage * 6.0, width: xPercentage * 85.0, height: yPercentage * 60.0))
             
             // Contruct NO Results Found Subview
             // TODO: Change this image to the new image once it's made

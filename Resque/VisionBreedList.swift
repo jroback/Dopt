@@ -193,7 +193,7 @@ var visionBreedList = [
 "Pointer",
 "Polish Lowland Sheepdog",
 "Pomeranian",
-"Standard Poodle",
+"Miniature Poodle",
 "Portuguese Water Dog",
 "Presa Canario",
 "Pug, Pug-Dog",
