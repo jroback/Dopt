@@ -647,7 +647,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age, Breed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eo4-ws-SxX">
-                                                <rect key="frame" x="143.5" y="399" width="87.5" height="21"/>
+                                                <rect key="frame" x="144" y="399" width="87.5" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="8wj-PA-RdF"/>
                                                 </constraints>
@@ -2301,10 +2301,10 @@
         <image name="small-size-search-icon" width="439" height="439"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bky-jA-6oH"/>
+        <segue reference="eH6-58-gRb"/>
         <segue reference="AmE-7z-hZc"/>
         <segue reference="Ore-Zo-LEI"/>
         <segue reference="Nf2-dT-ACi"/>
-        <segue reference="Sqn-tA-yJl"/>
+        <segue reference="DLA-On-lv8"/>
     </inferredMetricsTieBreakers>
 </document>

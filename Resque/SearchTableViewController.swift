@@ -133,16 +133,37 @@ class SearchTableViewController: UITableViewController {
         if searchControl.selectedSegmentIndex == 1 {
             imagePickerHelper = ImagePickerHelper(viewController: self, completion: { (image) in
                 self.selectedSearchImage = image
+                // UPDATE TEST
+                searchPhoto = image
+                self.searchButtonDidTap((Any).self)
             })
         }
     }
 
     @IBAction func searchButtonDidTap(_ sender: Any) {
+        if searchControl.selectedSegmentIndex == 0 {
+            selectedSearchImage = nil
+            searchPhoto = nil
+            isImageSearchActive = false
+            breed = ""
+            breedName = ""
+        }
+        
         puppyDict = []
         filteredPuppyDict = []
         offset = 0
         updateSearchParams()
         performSegue(withIdentifier: "HomeSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "HomeSegue" && searchControl.selectedSegmentIndex == 1 {
+            let destination = segue.destination as! HomeViewController
+            destination.runImageDetection(image: CIImage(image: searchPhoto!)!)
+        } else if segue.identifier == "HomeSegue" && searchControl.selectedSegmentIndex == 0 {
+            let destination = segue.destination as! HomeViewController
+            destination.viewDidLoad()
+        }
     }
 //
 }

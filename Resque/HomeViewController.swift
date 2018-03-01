@@ -96,7 +96,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         // Setup Hamburgr Menu
         hamburgerButtonItem.target = self.revealViewController()
         hamburgerButtonItem.action = #selector(SWRevealViewController().revealToggle(_:))
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+//      view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())  ---  BROKEN WITH SEARCH SEGUE?
         
         // Setup Location Manager
         locationManager.delegate = self
