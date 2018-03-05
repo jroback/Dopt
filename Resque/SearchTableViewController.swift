@@ -160,6 +160,7 @@ class SearchTableViewController: UITableViewController {
         if segue.identifier == "HomeSegue" && searchControl.selectedSegmentIndex == 1 {
             let destination = segue.destination as! HomeViewController
             destination.runImageDetection(image: CIImage(image: searchPhoto!)!)
+            offset = count
         } else if segue.identifier == "HomeSegue" && searchControl.selectedSegmentIndex == 0 {
             let destination = segue.destination as! HomeViewController
             destination.viewDidLoad()

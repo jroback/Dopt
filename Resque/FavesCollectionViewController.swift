@@ -34,6 +34,9 @@ class FavesCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // REMOVES THE LINE underneath the nav bar
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        
         hamburgerMenuButtonOutlet.target = self.revealViewController()
         hamburgerMenuButtonOutlet.action = #selector(SWRevealViewController().revealToggle(_:))
 

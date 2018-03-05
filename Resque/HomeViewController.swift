@@ -21,7 +21,6 @@ var petFinderPath = "http://api.petfinder.com/pet.find?"
 var petFinderShelterPath = "http://api.petfinder.com/shelter.get?"
 var petFinderSecret = "5be4d8778cb7c34684375711adc7b2aa"
 var jsonp = "callback=?"
-var offset = 0
 var faveIndex : Int = 0
 var pupTapIndex : Int = 0
 var photoSearchOffset : Int = 0
@@ -360,7 +359,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
           }
         }
         // UPDATE Offset count for next search
-        offset = offset + count
+    //  offset = offset + count
         print(offset)
         
         
@@ -508,6 +507,13 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @objc func loadMorePuppies() {
+        offset = offset + count
+        // Means that "Keep Browsing" was tapped on an image search
+        // The image result should be hidden
+        if isImageSearchActive == true && offset > count {
+            isImageSearchActive = false
+        }
+        print("Part 2 Offset = \(offset)")
         filteredPuppyDict = []
         puppyDict = []
         
@@ -575,6 +581,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
                             breedTraits.append(trait)
                         }
                         
+                        offset = 0
                         isImageSearchActive = true
                         searchPhoto = UIImage(ciImage: image)
                         breedConfidencePercentage = Int(firstResult.confidence * 100)

@@ -34,6 +34,7 @@ var selectedSizeArray : [String] = ["S", "M", "L", "XL", ""]
 var breedSize = ""
 var puppyBreed = ""
 var selectedBreeds : [String] = []
+var offset = 0
 
 // Photo Search
 var searchPhoto : UIImage?
