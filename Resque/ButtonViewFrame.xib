@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonViewFrame" customModule="rescue" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonViewFrame" customModule="Resque" customModuleProvider="target">
             <connections>
                 <outlet property="xibButtonFrame" destination="gcg-vO-oeF" id="aO8-Hz-g1V"/>
                 <outlet property="xibLike" destination="z0D-xa-Czt" id="EhB-mQ-Izs"/>
@@ -26,7 +26,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="169"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWG-mv-GBy" userLabel="xib Unlike">
-                            <rect key="frame" x="111" y="8" width="153" height="153"/>
+                            <rect key="frame" x="115" y="12" width="145" height="145"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="eWG-mv-GBy" secondAttribute="height" multiplier="1:1" id="Qc8-ke-XPD"/>
                             </constraints>
@@ -36,7 +36,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0D-xa-Czt" userLabel="xib Like">
-                            <rect key="frame" x="111" y="8" width="153" height="153"/>
+                            <rect key="frame" x="115" y="12" width="145" height="145"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="z0D-xa-Czt" secondAttribute="height" multiplier="1:1" id="ATM-EJ-HAY"/>
                             </constraints>
@@ -47,14 +47,14 @@
                         </button>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="eWG-mv-GBy" firstAttribute="top" secondItem="gcg-vO-oeF" secondAttribute="top" constant="8" id="0Gc-a2-FjX"/>
+                        <constraint firstItem="eWG-mv-GBy" firstAttribute="top" secondItem="gcg-vO-oeF" secondAttribute="top" constant="12" id="0Gc-a2-FjX"/>
                         <constraint firstItem="z0D-xa-Czt" firstAttribute="centerY" secondItem="gcg-vO-oeF" secondAttribute="centerY" id="2bl-AO-JNO"/>
-                        <constraint firstAttribute="bottom" secondItem="z0D-xa-Czt" secondAttribute="bottom" constant="8" id="C1W-BR-F8D"/>
+                        <constraint firstAttribute="bottom" secondItem="z0D-xa-Czt" secondAttribute="bottom" constant="12" id="C1W-BR-F8D"/>
                         <constraint firstItem="eWG-mv-GBy" firstAttribute="centerY" secondItem="gcg-vO-oeF" secondAttribute="centerY" id="Vh9-bZ-WJw"/>
                         <constraint firstItem="eWG-mv-GBy" firstAttribute="centerX" secondItem="gcg-vO-oeF" secondAttribute="centerX" id="XIF-xl-Qan"/>
-                        <constraint firstItem="z0D-xa-Czt" firstAttribute="top" secondItem="gcg-vO-oeF" secondAttribute="top" constant="8" id="Zoa-IO-Hy3"/>
+                        <constraint firstItem="z0D-xa-Czt" firstAttribute="top" secondItem="gcg-vO-oeF" secondAttribute="top" constant="12" id="Zoa-IO-Hy3"/>
                         <constraint firstItem="z0D-xa-Czt" firstAttribute="centerX" secondItem="gcg-vO-oeF" secondAttribute="centerX" id="oEU-CF-Zkt"/>
-                        <constraint firstAttribute="bottom" secondItem="eWG-mv-GBy" secondAttribute="bottom" constant="8" id="sby-R0-HG5"/>
+                        <constraint firstAttribute="bottom" secondItem="eWG-mv-GBy" secondAttribute="bottom" constant="12" id="sby-R0-HG5"/>
                     </constraints>
                 </view>
             </subviews>

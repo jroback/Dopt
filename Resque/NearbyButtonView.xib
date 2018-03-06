@@ -27,7 +27,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nearby-button" translatesAutoresizingMaskIntoConstraints="NO" id="rME-gj-2QY">
-                    <rect key="frame" x="111" y="8" width="153" height="153"/>
+                    <rect key="frame" x="115" y="12" width="145" height="145"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="rME-gj-2QY" secondAttribute="height" multiplier="1:1" id="ws8-D2-c0s"/>
                     </constraints>
@@ -53,13 +53,13 @@
                 </button>
             </subviews>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="rME-gj-2QY" secondAttribute="bottom" constant="8" id="9JE-db-GPq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="rME-gj-2QY" secondAttribute="bottom" constant="12" id="9JE-db-GPq"/>
                 <constraint firstItem="rME-gj-2QY" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Vgf-Bu-Z7O"/>
                 <constraint firstItem="WSh-OZ-MgI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="X5M-YJ-Jdh"/>
                 <constraint firstItem="WSh-OZ-MgI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="cMs-eF-D0c"/>
                 <constraint firstItem="DV9-gU-hbG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="23" id="dqf-bB-eWt"/>
                 <constraint firstItem="DV9-gU-hbG" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="7" id="flz-BK-2Aa"/>
-                <constraint firstItem="rME-gj-2QY" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="saB-LI-hYp"/>
+                <constraint firstItem="rME-gj-2QY" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="saB-LI-hYp"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

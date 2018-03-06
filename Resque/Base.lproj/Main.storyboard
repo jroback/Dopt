@@ -398,27 +398,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.050000000000000003" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pet-seamless-2" translatesAutoresizingMaskIntoConstraints="NO" id="9dB-hA-J99">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrL-2w-NBy">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="yrL-2w-NBy" firstAttribute="top" secondItem="oUR-jQ-Rqb" secondAttribute="bottom" id="15N-X4-QoC"/>
+                            <constraint firstItem="9dB-hA-J99" firstAttribute="top" secondItem="4Eh-kJ-Plc" secondAttribute="top" id="Gx4-GC-PTE"/>
                             <constraint firstAttribute="trailing" secondItem="9dB-hA-J99" secondAttribute="trailing" id="VXT-5A-MhU"/>
-                            <constraint firstItem="9dB-hA-J99" firstAttribute="top" secondItem="oUR-jQ-Rqb" secondAttribute="bottom" id="b9I-ac-RUw"/>
+                            <constraint firstAttribute="bottom" secondItem="9dB-hA-J99" secondAttribute="bottom" id="cBg-yL-F8c"/>
                             <constraint firstItem="yrL-2w-NBy" firstAttribute="leading" secondItem="4Eh-kJ-Plc" secondAttribute="leading" id="cqp-WP-0zd"/>
                             <constraint firstAttribute="trailing" secondItem="yrL-2w-NBy" secondAttribute="trailing" id="dzs-n6-7hG"/>
                             <constraint firstItem="niU-kE-dPR" firstAttribute="top" secondItem="yrL-2w-NBy" secondAttribute="bottom" id="lwy-bq-zq5"/>
                             <constraint firstItem="9dB-hA-J99" firstAttribute="leading" secondItem="4Eh-kJ-Plc" secondAttribute="leading" id="mtC-ck-dtR"/>
-                            <constraint firstItem="niU-kE-dPR" firstAttribute="top" secondItem="9dB-hA-J99" secondAttribute="bottom" id="mxz-k6-zcx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="yyc-cv-3dx">
                         <barButtonItem key="leftBarButtonItem" image="hamburg-white" id="97x-b8-KM3">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="image-search-icon-white-small-3" id="fIg-2Y-Xb1">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1367,7 +1367,7 @@
                         <color key="barTintColor" red="0.31764705882352939" green="0.65490196078431373" blue="0.97647058823529409" alpha="0.85191271550000003" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2301,7 +2301,7 @@
         <image name="small-size-search-icon" width="439" height="439"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eH6-58-gRb"/>
+        <segue reference="bky-jA-6oH"/>
         <segue reference="AmE-7z-hZc"/>
         <segue reference="Ore-Zo-LEI"/>
         <segue reference="Nf2-dT-ACi"/>

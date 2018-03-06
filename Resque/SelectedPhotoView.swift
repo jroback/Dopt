@@ -35,7 +35,7 @@ class SelectedPhotoView: UIView {
         view.frame = bounds
         view.autoresizingMask = UIViewAutoresizing.flexibleWidth
         
-        selectedPhoto.layer.cornerRadius = (selectedPhoto.layer.frame.width * 0.84) / 2.0
+        selectedPhoto.layer.cornerRadius = (selectedPhoto.layer.frame.width * 0.85) / 2.0
         selectedPhoto.layer.masksToBounds = true
         selectedPhoto.layer.borderWidth = 1.5
         selectedPhoto.layer.borderColor = ColorPallet.init().white

@@ -43,22 +43,19 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Old English Sheepdog" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1iA-N6-O2j">
-                    <rect key="frame" x="23" y="227" width="272" height="87.5"/>
+                    <rect key="frame" x="23" y="226.5" width="272" height="87.5"/>
                     <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="32"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" image="Giordanos072816" translatesAutoresizingMaskIntoConstraints="NO" id="6My-tR-dAX">
                     <rect key="frame" x="0.0" y="0.0" width="319" height="199"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="199" id="AHw-kr-d5a"/>
-                    </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sal-QM-mpQ">
-                    <rect key="frame" x="24" y="318.5" width="271" height="73.5"/>
+                    <rect key="frame" x="24" y="318" width="271" height="74"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="QoK-dF-Y2k">
-                            <rect key="frame" x="0.0" y="6" width="148.5" height="26"/>
+                            <rect key="frame" x="0.0" y="6.5" width="148.5" height="26"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Label " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pB5-uR-J1h">
                                     <rect key="frame" x="0.0" y="0.0" width="45.5" height="26"/>
@@ -90,7 +87,7 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="IYC-QH-E8f">
-                            <rect key="frame" x="0.0" y="37.5" width="148.5" height="26"/>
+                            <rect key="frame" x="0.0" y="38" width="148.5" height="26"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Label " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qO1-zf-sqc">
                                     <rect key="frame" x="0.0" y="0.0" width="45.5" height="26"/>
@@ -123,6 +120,7 @@
                         </stackView>
                     </subviews>
                     <constraints>
+                        <constraint firstAttribute="height" constant="74" id="J8F-zH-md5"/>
                         <constraint firstItem="QoK-dF-Y2k" firstAttribute="leading" secondItem="Sal-QM-mpQ" secondAttribute="leading" id="MFi-wm-aJr"/>
                         <constraint firstItem="IYC-QH-E8f" firstAttribute="leading" secondItem="Sal-QM-mpQ" secondAttribute="leading" id="O7S-Nt-J6Z"/>
                         <constraint firstItem="QoK-dF-Y2k" firstAttribute="centerY" secondItem="Sal-QM-mpQ" secondAttribute="centerY" constant="-18" id="Uvr-T5-PJm"/>
@@ -132,6 +130,7 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="1iA-N6-O2j" firstAttribute="top" secondItem="w3b-qM-g3H" secondAttribute="bottom" constant="-5.5" id="0Ju-Dp-p3a"/>
                 <constraint firstItem="6My-tR-dAX" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="3lg-Fp-JK7"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1iA-N6-O2j" secondAttribute="trailing" constant="24" id="8Vw-Tb-Zv5"/>
                 <constraint firstItem="1iA-N6-O2j" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="23" id="DAJ-xx-84x"/>
@@ -143,7 +142,6 @@
                 <constraint firstItem="Wm9-UT-XaD" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="kVU-Tg-ezh"/>
                 <constraint firstItem="Sal-QM-mpQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="lgB-tL-Y0q"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Sal-QM-mpQ" secondAttribute="trailing" constant="24" id="m5D-r4-TxR"/>
-                <constraint firstItem="1iA-N6-O2j" firstAttribute="top" secondItem="w3b-qM-g3H" secondAttribute="bottom" constant="-5" id="mbm-VE-Uy6"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Sal-QM-mpQ" secondAttribute="bottom" constant="8" id="pXb-ur-qau"/>
                 <constraint firstItem="Wm9-UT-XaD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="sHu-VU-ZrI"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="w3b-qM-g3H" secondAttribute="trailing" constant="24" id="sgd-ym-H1x"/>
